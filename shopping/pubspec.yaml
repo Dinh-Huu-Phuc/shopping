@@ -1,0 +1,50 @@
+name: shopping
+description: "A new Flutter project."
+publish_to: 'none' # Không công bố lên pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  get: ^4.6.6
+  get_storage: ^2.1.1
+  share_plus: ^10.1.3
+  flutter_launcher_icons: ^0.13.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter_icons:
+  android: "ic_launcher_coffeetea"
+  ios: false
+  image_path: "assets/image/onlineShop.jpg"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/image/
+    - assets/font/
+
+  # fonts phần comment nếu không dùng thì có thể bỏ hoặc giữ trong comment đúng indent
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
