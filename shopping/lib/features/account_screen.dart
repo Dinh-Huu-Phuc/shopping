@@ -148,7 +148,7 @@ class AccountScreen extends StatelessWidget {
               onTap: () {
                 if (item['title'] == 'Logout') {
                   _showLogoutDialog(context);
-                } else if (item['title'] == 'My Orders') {
+                } else if (item['title'] == 'My Order') {
                   Get.to(() => MyOrdersScreen());
                 } else if (item['title'] == 'Shipping Address') {
                   //navigation to Shipping Address
