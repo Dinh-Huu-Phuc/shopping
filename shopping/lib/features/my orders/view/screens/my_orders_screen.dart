@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:shopping/features/my%20orders/repository/order_repository.dart';
 import 'package:shopping/utils/app_textstyles.dart';
 
+import '../../model/order.dart';
+import '../widgets/order_card.dart';
+
 class MyOrdersScreen extends StatelessWidget {
-  const MyOrdersScreen({super.key});
+  final OrderRepository _repository = OrderRepository();
+  MyOrdersScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +43,26 @@ class MyOrdersScreen extends StatelessWidget {
             ],
           ),
         ),
+        body: TabBarView(
+          children: [
+            _buildOrderList(context, OrderStatus.active),
+            _buildOrderList(context, OrderStatus.completed),
+            _buildOrderList(context, OrderStatus.cancelled),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildOrderList(BuildContext context, OrderStatus status){
+    final orders = _repository.getOrdersByStatus(status);
+
+    return ListView.builder(
+      padding: EdgeInsets.all(16),
+      itemCount: orders.length,
+      itemBuilder: (context, index) => OrderCard(
+        order: orders[index],
+        onViewDetails: (){},
       ),
     );
   }

@@ -15,7 +15,7 @@ class OrderRepository {
         OrderNumber: '322422', 
         itemCount: 1, 
         totalAmount: 423.3, 
-        status: OrderStatus.active, 
+        status: OrderStatus.completed, 
         imageUrl: 'assets/image/denim_jacket_white.jpg', 
         orderDate: DateTime.now().subtract(const Duration(hours: 1)),
       ),
@@ -23,7 +23,7 @@ class OrderRepository {
         OrderNumber: '1423', 
         itemCount: 2, 
         totalAmount: 9999.9, 
-        status: OrderStatus.active, 
+        status: OrderStatus.cancelled, 
         imageUrl: 'assets/image/wide_leg_pants_white.jpg', 
         orderDate: DateTime.now().subtract(const Duration(hours: 4)),
       ),
@@ -39,7 +39,7 @@ class OrderRepository {
   }
 
   List<Order> getOrdersByStatus(OrderStatus status){
-
+  
     return getOrders().where((order) => order.status == status).toList();
   }
 }
