@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.all(1),
               child: Row(
                 children: [
                   CircleAvatar(
