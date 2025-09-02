@@ -5,6 +5,8 @@ import 'package:shopping/features/my%20orders/view/screens/my_orders_screen.dart
 import 'package:shopping/utils/app_textstyles.dart';
 import 'package:shopping/features/signin_screen.dart';
 
+import 'edit profile/screens/edit_profile_screen.dart';
+import 'help center/screens/help_center_screen.dart';
 import 'setting_screen.dart';
 import 'shipping address/widgets/shipping_address_screen.dart';
 
@@ -81,7 +83,7 @@ class AccountScreen extends StatelessWidget {
           ),
           SizedBox(height: 16),
           OutlinedButton(
-            onPressed: () {},
+            onPressed: () => Get.to(() => EditProfileScreen()),
             style: OutlinedButton.styleFrom(
               padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
               side: BorderSide(color: isDark ? Colors.white70 : Colors.black12),
@@ -154,7 +156,7 @@ class AccountScreen extends StatelessWidget {
                 } else if (item['title'] == 'Shipping Address') {
                   Get.to(() => ShippingAddressScreen());
                 } else if (item['title'] == 'Help Center') {
-                  // navigation to help center
+                  Get.to(() => HelpCenterScreen());
                 }
               },
             ),
