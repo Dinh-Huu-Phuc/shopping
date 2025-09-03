@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:shopping/models/product.dart';
 import 'package:shopping/utils/app_textstyles.dart';
 
+import 'checkout/screens/checkout_screen.dart';
+
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -302,9 +304,7 @@ class CartScreen extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: (){
-                //navigate to checkout screen
-              },
+              onPressed: () => Get.to(() => CheckoutScreen()),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Theme.of(context).colorScheme.secondary,
                 padding:  EdgeInsets.symmetric(vertical: 16),

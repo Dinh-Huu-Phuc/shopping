@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../controllers/theme_controller.dart';
 import '../utils/app_textstyles.dart';
 import 'privacy policy/screens/privacy_policy_screen.dart';
+import 'terms of services/screens/term_of_serviecs_screen.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({super.key});
@@ -64,6 +65,7 @@ class SettingScreen extends StatelessWidget {
                 'Teams of Service',
                 'Read our terms of service',
                 Icons.description_outlined,
+                onTap: () => Get.to(() => TermOfServiecsScreen()),
               ),
             ]),
 
